@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "--config=configs/tapnet_config.py",
+                "--jaxline_mode=eval_inference",
+                "--config.checkpoint_dir=checkpoint/",
+                "--config.experiment_kwargs.config.inference.input_video_path=data/tmp/sea_lion.mp4",
+                "--config.experiment_kwargs.config.inference.output_video_path=data/tmp/sea_lion_result.mp4",
+                "--config.experiment_kwargs.config.inference.num_points=50",
+                "--jaxline_disable_pmap_jit=False",
+                "--jaxline_post_mortem=False"
+            ]
+        }
+    ]
+}
